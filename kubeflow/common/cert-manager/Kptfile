@@ -10,5 +10,5 @@ openAPI:
       x-k8s-cli:
         setter:
           name: name
-          value: KUBEFLOW-NAME
+          value: kubeflow
           isSet: true

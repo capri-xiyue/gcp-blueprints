@@ -10,24 +10,25 @@ openAPI:
       x-k8s-cli:
         setter:
           name: asm-label
-          value: ASM-LABEL
+          value: asm-193-2
+          isSet: true
     io.k8s.cli.setters.name:
       x-k8s-cli:
         setter:
           name: name
-          value: KUBEFLOW-NAME
+          value: kubeflow
           isSet: true
     io.k8s.cli.setters.gcloud.core.project:
       x-k8s-cli:
         setter:
           name: gcloud.core.project
-          value: PROJECT
+          value: xiyue-kfp
           isSet: true
     io.k8s.cli.setters.email:
       x-k8s-cli:
         setter:
           name: email
-          value: EMAIL
+          value: xiyue@google.com
           isSet: true
     io.k8s.cli.substitutions.admin-sa-ref:
       x-k8s-cli:

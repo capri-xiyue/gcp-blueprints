@@ -4,11 +4,11 @@ metadata:
   annotations:
     gke.io/cluster: "bootstrap://"
   name: "asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.setters.gcloud.container.cluster"}
-  namespace: "PROJECT" # {"$ref":"#/definitions/io.k8s.cli.setters.gcloud.core.project"}
+  namespace: "xiyue-kfp" # {"$ref":"#/definitions/io.k8s.cli.setters.gcloud.core.project"}
 spec:
   location: us-central1-c # {"$ref":"#/definitions/io.k8s.cli.setters.gcloud.compute.location"}
   workloadIdentityConfig:
-    identityNamespace: "PROJECT.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
+    identityNamespace: "xiyue-kfp.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
   labels:
     mesh_id: "proj-PROJECT_NUMBER" # {"$ref":"#/definitions/io.k8s.cli.substitutions.mesh-id"}
   loggingService: logging.googleapis.com/kubernetes

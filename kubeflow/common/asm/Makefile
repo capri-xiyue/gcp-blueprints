@@ -37,7 +37,7 @@ downalod-install-asm-script:
 # 	chmod +x install_asm; \
 # 	cd -;}
 
-.PHONY: download-asm-package
+.PHONY: download-asm-packag
 download-asm-package:
 	rm -rf ./asm
 	kpt pkg get https://github.com/GoogleCloudPlatform/anthos-service-mesh-packages.git/asm@$(ASM_PACKAGE_VERSION) ./
@@ -50,8 +50,8 @@ install-asm: downalod-install-asm-script download-asm-package
 	--cluster_location $(LOCATION) \
 	--mode install \
 	--enable_all \
-	--custom_overlay ./asm/istio/options/iap-operator.yaml \
-	--custom_overlay ./options/ingressgateway-iap.yaml
+	--custom_overlay /Users/xiyue/go/src/kubeflow/gcp-blueprints/kubeflow/common/asm/asm/istio/options/iap-operator.yaml \
+	--custom_overlay /Users/xiyue/go/src/kubeflow/gcp-blueprints/kubeflow/common/asm/options/ingressgateway-iap.yaml
 
 
 .PHONY: apply

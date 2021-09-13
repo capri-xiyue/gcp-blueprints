@@ -4,7 +4,7 @@ metadata:
   annotations:
     gke.io/cluster: "bootstrap://"
   name: default-pool
-  namespace: "PROJECT" # {"$ref":"#/definitions/io.k8s.cli.setters.gcloud.core.project"}
+  namespace: "xiyue-kfp" # {"$ref":"#/definitions/io.k8s.cli.setters.gcloud.core.project"}
 spec:
   initialNodeCount: 2
   autoscaling:

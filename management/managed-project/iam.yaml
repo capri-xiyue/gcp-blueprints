@@ -1,14 +1,14 @@
 apiVersion: iam.cnrm.cloud.google.com/v1beta1
 kind: IAMPolicyMember
 metadata:
-  name: cnrm-system-MANAGED_PROJECT-owner # {"$kpt-set":"managed-project-policy-name"}
-  namespace: MANAGED_PROJECT # {"$kpt-set":"managed-project"}
+  name: cnrm-system-xiyue-kfp-owner # {"$kpt-set":"managed-project-policy-name"}
+  namespace: xiyue-kfp # {"$kpt-set":"managed-project"}
 spec:
-  member: serviceAccount:MANAGEMENT-NAME-cnrm-system@PROJECT.iam.gserviceaccount.com # {"$kpt-set":"managed-project-owner-member"}
+  member: serviceAccount:xiyue-kf-mgmt-cnrm-system@xiyue-kfp.iam.gserviceaccount.com # {"$kpt-set":"managed-project-owner-member"}
   role: roles/owner
   resourceRef:
     apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
     kind: Project
     # N.B. With anthoscli 0.2.4 this is just the project id
     # and not projects/MANAGED_PROJECT as used by the CNRM docs.
-    external: MANAGED_PROJECT # {"$kpt-set":"managed-project"}
+    external: xiyue-kfp # {"$kpt-set":"managed-project"}

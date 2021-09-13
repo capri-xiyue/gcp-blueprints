@@ -10,13 +10,13 @@ openAPI:
       x-k8s-cli:
         setter:
           name: name
-          value: KUBEFLOW-NAME
+          value: kubeflow
           isSet: true
     io.k8s.cli.setters.gcloud.core.project:
       x-k8s-cli:
         setter:
           name: gcloud.core.project
-          value: PROJECT
+          value: xiyue-kfp
           isSet: true
     io.k8s.cli.substitutions.user-sa-ref:
       x-k8s-cli:
@@ -32,19 +32,19 @@ openAPI:
       x-k8s-cli:
         setter:
           name: gcloud.compute.region
-          value: REGION
+          value: us-west1
           isSet: true
     io.k8s.cli.setters.gcloud.compute.zone:
       x-k8s-cli:
         setter:
           name: gcloud.compute.zone
-          value: ZONE
+          value: us-west1-c
           isSet: true
     io.k8s.cli.setters.mgmt-ctxt:
       x-k8s-cli:
         setter:
           name: mgmt-ctxt
-          value: MANAGEMENT-CTXT
+          value: xiyue-kf-mgmt
           isSet: true
     io.k8s.cli.substitutions.cloudsql-instance-connection-name:
       x-k8s-cli:
@@ -170,17 +170,17 @@ openAPI:
       x-k8s-cli:
         setter:
           name: cloudsql-name
-          value: CLOUDSQL-NAME
+          value: kubeflow-kfp
           isSet: true
     io.k8s.cli.setters.bucket-name:
       x-k8s-cli:
         setter:
           name: bucket-name
-          value: BUCKET-NAME
+          value: xiyue-kfp-kfp
           isSet: true
     io.k8s.cli.setters.default-pipeline-root:
       x-k8s-cli:
         setter:
           name: default-pipeline-root
-          value: minio://mlpipeline/v2/artifacts
+          value: gs://xiyue-kfp-kfp/v2/artifacts
           isSet: true

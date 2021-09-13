@@ -10,19 +10,19 @@ openAPI:
       x-k8s-cli:
         setter:
           name: location
-          value: LOCATION
+          value: us-west1-c
           isSet: true
     io.k8s.cli.setters.name:
       x-k8s-cli:
         setter:
           name: name
-          value: MANAGEMENT-NAME
+          value: xiyue-kf-mgmt
           isSet: true
     io.k8s.cli.setters.gcloud.core.project:
       x-k8s-cli:
         setter:
           name: gcloud.core.project
-          value: PROJECT
+          value: xiyue-kfp
           isSet: true
     io.k8s.cli.substitutions.cluster-name:
       x-k8s-cli:
@@ -108,4 +108,5 @@ openAPI:
       x-k8s-cli:
         setter:
           name: managed-project
-          value: MANAGED_PROJECT
+          value: xiyue-kfp
+          isSet: true

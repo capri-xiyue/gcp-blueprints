@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+  name: upstream
+upstream:
+  type: git
+  git:
+    commit: 18b9bc8d2d98d62c241c2a68e2b2effb8b0222b2
+    repo: https://github.com/kubeflow/manifests
+    directory: /common/istio-1-9
+    ref: v1.4.0-rc.0

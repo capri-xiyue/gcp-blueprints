@@ -1,0 +1,14 @@
+apiVersion: iam.cnrm.cloud.google.com/v1beta1
+kind: IAMPolicyMember
+metadata:
+  labels:
+    kf-name: kubeflow
+  name: kubeflow-user-monitoringviewer
+  namespace: xiyue-kfp
+spec:
+  member: serviceAccount:kubeflow-user@xiyue-kfp.iam.gserviceaccount.com
+  resourceRef:
+    apiVersion: resourcemanager.cnrm.cloud.google.com/v1beta1
+    external: projects/xiyue-kfp
+    kind: Project
+  role: roles/monitoring.viewer

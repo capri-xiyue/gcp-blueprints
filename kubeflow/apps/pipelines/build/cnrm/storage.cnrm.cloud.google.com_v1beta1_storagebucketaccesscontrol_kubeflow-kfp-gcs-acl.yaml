@@ -1,0 +1,13 @@
+apiVersion: storage.cnrm.cloud.google.com/v1beta1
+kind: StorageBucketAccessControl
+metadata:
+  labels:
+    app: kubeflow-pipelines
+    kf-name: kubeflow
+  name: kubeflow-kfp-gcs-acl
+  namespace: xiyue-kfp
+spec:
+  bucketRef:
+    name: xiyue-kfp-kfp
+  entity: user-kubeflow-user@xiyue-kfp.iam.gserviceaccount.com
+  role: OWNER

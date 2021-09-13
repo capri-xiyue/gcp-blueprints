@@ -5,10 +5,10 @@ metadata:
 upstream:
   type: git
   git:
-    commit: c4cd4a547731c2b3a322da43183ed130baebc33f
+    commit: e87d1a77767c099a05c660c108f55b161795cccd
     repo: https://github.com/GoogleCloudPlatform/anthos-service-mesh-packages
     directory: /asm
-    ref: 1.9.1-asm.1+config3
+    ref: 1.9.3-asm.2+config2
 openAPI:
   definitions:
     io.k8s.cli.setters.anthos.servicemesh.canonicalServiceHub:
@@ -121,7 +121,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: gcloud.compute.network
-          value: default
+          value: NETWORK_ID
     io.k8s.cli.setters.gcloud.compute.subnetwork:
       type: string
       x-k8s-cli:
@@ -134,12 +134,6 @@ openAPI:
         setter:
           name: gcloud.container.cluster
           value: asm-cluster
-    io.k8s.cli.setters.gcloud.container.cluster.clusterSecondaryRange:
-      type: string
-      x-k8s-cli:
-        setter:
-          name: gcloud.container.cluster.clusterSecondaryRange
-          value: ""
     io.k8s.cli.setters.gcloud.container.cluster.ingress.httpPort:
       type: integer
       x-k8s-cli:
@@ -160,12 +154,6 @@ openAPI:
         setter:
           name: gcloud.container.cluster.releaseChannel
           value: REGULAR
-    io.k8s.cli.setters.gcloud.container.cluster.servicesSecondaryRange:
-      type: string
-      x-k8s-cli:
-        setter:
-          name: gcloud.container.cluster.servicesSecondaryRange
-          value: ""
     io.k8s.cli.setters.gcloud.container.nodepool.max-nodes:
       x-k8s-cli:
         setter:
@@ -176,7 +164,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: gcloud.core.project
-          value: PROJECT
+          value: xiyue-kfp
           isSet: true
     io.k8s.cli.setters.gcloud.project.environProjectID:
       type: string
@@ -195,7 +183,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: gcloud.project.projectNumber
-          value: PROJECT_NUMBER
+          value: "230026753071"
           isSet: true
     io.k8s.cli.substitutions.cluster-name:
       type: string

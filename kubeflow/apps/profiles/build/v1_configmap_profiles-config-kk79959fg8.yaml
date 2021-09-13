@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  admin: xiyue@google.com
+  gcp-sa: kubeflow-user@xiyue-kfp.iam.gserviceaccount.com
+kind: ConfigMap
+metadata:
+  labels:
+    kustomize.component: profiles
+  name: profiles-config-kk79959fg8
+  namespace: kubeflow

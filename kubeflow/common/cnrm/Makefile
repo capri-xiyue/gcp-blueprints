@@ -45,5 +45,6 @@ apply-cnrm: hydrate
 apply:
 	echo $(build_dir)
 	$(MAKE) apply-cnrm build_dir=$(build_dir)
+	echo "test"
 	$(MAKE) wait-gcp
 	$(MAKE) create-ctxt

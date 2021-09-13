@@ -6,12 +6,12 @@ spec:
   tag: 1.9.0-asm.3 # {"$ref":"#/definitions/io.k8s.cli.setters.anthos.servicemesh.tag"}
   meshConfig:
     trustDomainAliases: # {"$ref":"#/definitions/io.k8s.cli.setters.anthos.servicemesh.trustDomainAliases"}
-    - PROJECT.svc.id.goog # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
-    trustDomain: PROJECT.svc.id.goog # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
+    - xiyue-kfp.svc.id.goog # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
+    trustDomain: xiyue-kfp.svc.id.goog # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
     defaultConfig:
       proxyMetadata:
-        GKE_CLUSTER_URL: "https://container.googleapis.com/v1/projects/PROJECT/locations/us-central1-c/clusters/asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-cluster-url"}
-        GCP_METADATA: "PROJECT|PROJECT_NUMBER|asm-cluster|us-central1-c" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-metadata"}
+        GKE_CLUSTER_URL: "https://container.googleapis.com/v1/projects/xiyue-kfp/locations/us-central1-c/clusters/asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-cluster-url"}
+        GCP_METADATA: "xiyue-kfp|230026753071|asm-cluster|us-central1-c" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-metadata"}
         CA_PROVIDER: "GoogleCA"
         PLUGINS: "GoogleTokenExchange"
         USE_TOKEN_FOR_CSR: "true"
@@ -51,15 +51,15 @@ spec:
         replicaCount: 2
         env:
         - name: GKE_CLUSTER_URL
-          value: "https://container.googleapis.com/v1/projects/PROJECT/locations/us-central1-c/clusters/asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-cluster-url"}
+          value: "https://container.googleapis.com/v1/projects/xiyue-kfp/locations/us-central1-c/clusters/asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-cluster-url"}
         - name: GCP_METADATA
-          value: "PROJECT|PROJECT_NUMBER|asm-cluster|us-central1-c" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-metadata"}
+          value: "xiyue-kfp|230026753071|asm-cluster|us-central1-c" # {"$ref":"#/definitions/io.k8s.cli.substitutions.gke-metadata"}
         - name: SPIFFE_BUNDLE_ENDPOINTS
-          value: "PROJECT.svc.id.goog|https://storage.googleapis.com/mesh-ca-resources/spiffe_bundle.json" # {"$ref":"#/definitions/io.k8s.cli.substitutions.spiffe-bundle-endpoints"}
+          value: "xiyue-kfp.svc.id.goog|https://storage.googleapis.com/mesh-ca-resources/spiffe_bundle.json" # {"$ref":"#/definitions/io.k8s.cli.substitutions.spiffe-bundle-endpoints"}
         - name: ENABLE_STACKDRIVER_MONITORING
           value: "true" # {"$ref":"#/definitions/io.k8s.cli.setters.anthos.servicemesh.controlplane.monitoring.enabled"}
         - name: TOKEN_AUDIENCES
-          value: "istio-ca,PROJECT.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.token-audiences"}
+          value: "istio-ca,xiyue-kfp.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.token-audiences"}
         - name: PILOT_ENABLE_WORKLOAD_ENTRY_AUTOREGISTRATION
           value: "true"
   values:
@@ -89,9 +89,9 @@ spec:
         servicePort: 15463
       sds:
         token:
-          aud: "PROJECT.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
+          aud: "xiyue-kfp.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
       multiCluster:
         # Provided to ensure a human readable name rather than a UUID.
-        clusterName: "cn-PROJECT-us-central1-c-asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.cluster-name"}
+        clusterName: "cn-xiyue-kfp-us-central1-c-asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.cluster-name"}
       meshID: "proj-PROJECT_NUMBER" # {"$ref":"#/definitions/io.k8s.cli.substitutions.mesh-id"}
       network: "NETWORK_ID" # {"$ref":"#/definitions/io.k8s.cli.substitutions.network"}

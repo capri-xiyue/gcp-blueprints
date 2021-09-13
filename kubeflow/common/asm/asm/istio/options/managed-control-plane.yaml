@@ -21,7 +21,7 @@ spec:
         app: istio-ingressgateway
         istio: ingressgateway
   meshConfig:
-    trustDomain: "PROJECT.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
+    trustDomain: "xiyue-kfp.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
     defaultConfig:
       proxyMetadata:
         CA_ROOT_CA: "/etc/ssl/certs/ca-certificates.crt"
@@ -37,7 +37,7 @@ spec:
     global:
       sds:
         token:
-          aud: "PROJECT.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
+          aud: "xiyue-kfp.svc.id.goog" # {"$ref":"#/definitions/io.k8s.cli.substitutions.trust-domain"}
       meshID: "proj-PROJECT_NUMBER" # {"$ref":"#/definitions/io.k8s.cli.substitutions.mesh-id"}
       multiCluster:
-        clusterName: "cn-PROJECT-us-central1-c-asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.cluster-name"}
+        clusterName: "cn-xiyue-kfp-us-central1-c-asm-cluster" # {"$ref":"#/definitions/io.k8s.cli.substitutions.cluster-name"}
